@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+
+<table id="bilett-form">
+    <tr>
+        <td>
+            <label for="select">Velg Film</label>
+        </td>
+        <td>
+            <select id="select" name="select" required>
+                <option value="">Velg en film</option>
+                <option value="Interstellar">Interstellar</option>
+                <option value="Ad Astra">Ad Astra</option>
+                <option value="Gladiatoren">Gladiatoren</option>
+                <option value="Don't Look UP">Don't Look UP</option>
+                <option value="The Irishman">The Irishman</option>
+                <option value="The Big Short">The Big Short</option>
+            </select>
+        </td>
+        <td id="selectedFilm" style="color:red"></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Antall">Antall</label>
+        </td>
+        <td>
+            <input id="Antall" type="number" value="" required>
+        </td>
+        <td id="box1" style="color: red"></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Fornavn">Fornavn</label>
+        </td>
+        <td>
+            <input id="Fornavn" type="text" value="" required>
+        </td>
+        <td id="box2" style="color: red">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Etternavn">Etternavn</label>
+        </td>
+        <td>
+            <input id="Etternavn" type="text" value="" required>
+        </td>
+        <td id="box3" style="color: red">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Telefonnr">Fornavn</label>
+        </td>
+        <td>
+            <input id="Telefonnr" type="text" value="" required>
+        </td>
+        <td id="box4" style="color: red">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="Epost">Fornavn</label>
+        </td>
+        <td>
+            <input id="Epost" type="text" value="" required>
+        </td>
+        <td id="box5" style="color: red">
+        </td>
+    </tr>
+</table>
+<br>
+<button id="kjoppBilett" onclick="kjoppBilett()">Kjøpp Bilett</button>
+<h2>Biletter</h2>
+<div id="biletter"></div>
+<br>
+<button id="slettBiletter" onclick="slettBilettene()">Slett Biletter</button>
+
+</body>
+</html>
