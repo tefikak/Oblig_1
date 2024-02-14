@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="bilett.js"></script>
+    <script src="billett.js"></script>
 </head>
 <body>
-<h1>Bestilling av kinobiletter</h1>
+<div>
+<h1>Bestilling av kinobilletter</h1>
 
-<table id="bilett-form">
+<table>
     <tr>
         <td>
             <label for="select">Velg Film</label>
@@ -28,12 +29,12 @@
     </tr>
     <tr>
         <td>
-            <label for="Antall">Antall</label>
+            <label for="Antall">Antall Person</label>
         </td>
         <td>
-            <input id="Antall" type="number" value="" required>
+            <input id="Antall" type="number" min="1" value="" required style="width: 35px">
         </td>
-        <td id="box1" style="color: red"></td>
+        <td id="AntallBox" style="color: red"></td>
     </tr>
     <tr>
         <td>
@@ -42,7 +43,7 @@
         <td>
             <input id="Fornavn" type="text" value="" required>
         </td>
-        <td id="box2" style="color: red">
+        <td id="FornavnBox" style="color: red">
         </td>
     </tr>
     <tr>
@@ -52,36 +53,36 @@
         <td>
             <input id="Etternavn" type="text" value="" required>
         </td>
-        <td id="box3" style="color: red">
+        <td id="EtternavnBox" style="color: red">
         </td>
     </tr>
     <tr>
         <td>
-            <label for="Telefonnr">Telefon nr.</label>
+            <label for="Telefonnr">Telefonnummer</label>
         </td>
         <td>
             <input id="Telefonnr" type="tel" value="" required>
         </td>
-        <td id="box4" style="color: red">
+        <td id="TelefonnrBox" style="color: red">
         </td>
     </tr>
     <tr>
         <td>
-            <label for="Epost">Epost</label>
+            <label for="Epost">E-post</label>
         </td>
         <td>
             <input id="Epost" type="email" value="" required>
         </td>
-        <td id="box5" style="color: red">
+        <td id="EpostBox" style="color: red">
         </td>
     </tr>
 </table>
 <br>
-<button id="kjoppBilett" onclick="kjoppBilett()">Kjøpp Bilett</button>
-<h2>Biletter</h2>
-<div id="biletter"></div>
+<button id="kjopBillett" onclick="kjopBillett()">Kjøp Billett</button>
+<h2>Billetter</h2>
+<div id="billetter"></div>
 <br>
-<button id="slettBiletter" onclick="slettBilettene()">Slett Biletter</button>
-
+<button id="slettBiletter" onclick="slettBillettene()">Slett Billettene</button>
+</div>
 </body>
 </html>
