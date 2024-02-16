@@ -1,65 +1,34 @@
 let billettene =[];
 function kjopBillett(){
-    let filmnavn ;
-    try{
-        filmnavn = document.getElementById('select').value;
-        if (filmnavn ===''){
-            throw new error;
-        }
+
+    let filmnavn = document.getElementById('select').value;
+        if (filmnavn ==='' ){
+            document.getElementById('selectedFilm').innerText='Vennligst velg en film';
     }
-    catch (error){
-        document.getElementById('selectedFilm').innerText='Vennligst velg en film';
-    }
-    let Antall ;
-    try{
-        Antall = document.getElementById('Antall').value;
+    let Antall = document.getElementById('Antall').value;
         if (Antall === ''){
-            throw new error;
-        }
+            document.getElementById('AntallBox').innerText='' +'Vennligst skriv antall personer';
     }
-    catch (error){
-        document.getElementById('AntallBox').innerText='' +'Vennligst skriv antall personer';
-    }
-    let Fornavn ;
-    try{
-        Fornavn = document.getElementById('Fornavn').value;
+    let Fornavn = document.getElementById('Fornavn').value;
         if (Fornavn === ''){
-            throw new error;
-        }
-        }
-    catch (error  ){
-        document.getElementById('FornavnBox').innerText='Vennligst skriv navnet ditt';
+            document.getElementById('FornavnBox').innerText='Vennligst skriv navnet ditt';
     }
-    let Etternavn ;
-    try{
-        Etternavn = document.getElementById('Etternavn').value;
+    let Etternavn = document.getElementById('Etternavn').value;
+
         if (Etternavn === ''){
-            throw new error;
-        }
+            document.getElementById('EtternavnBox').innerText='Vennligst skriv etternavnet ditt';
     }
-    catch (error){
-        document.getElementById('EtternavnBox').innerText='Vennligst skriv etternavnet ditt';
-    }
-    let Telefonnr ;
-    try{
-        Telefonnr = document.getElementById('Telefonnr').value;
+    let Telefonnr = document.getElementById('Telefonnr').value;
         if (Telefonnr === ''){
-            throw new error;
-        }
+            document.getElementById('TelefonnrBox').innerText='Vennligst skriv et telefon nummer';
     }
-    catch (error){
-        document.getElementById('TelefonnrBox').innerText='Vennligst skriv et telefon nummer';
-    }
-    let Epost ;
-    try{
-        Epost = document.getElementById('Epost').value;
+
+    let Epost = document.getElementById('Epost').value;
         if (Epost === ''){
-            throw new error;
-        }
+            document.getElementById('EpostBox').innerText='Vennligst skriv en e-post adresse';
     }
-    catch (error){
-        document.getElementById('EpostBox').innerText='Vennligst skriv en e-post adresse';
-    }
+
+
 
     let billett = {
         filmnavn:filmnavn,
@@ -69,6 +38,7 @@ function kjopBillett(){
         Telefonnr:Telefonnr,
         Epost:Epost
     };
+
     if (Antall !== "" && Fornavn !== "" && Etternavn !== "" && Telefonnr !== "" && Epost !== ""){
         billettene.push(billett);
     }
@@ -81,7 +51,7 @@ function kjopBillett(){
     visBilettene();
 }
 function visBilettene() {
-    let ut= "<table border='2'>";
+    let ut= "<table border='5'>";
     ut += "<tr>";
     ut += "<th>Film</th><th>Antall Person</th><th>Fornavn</th><th>Etternavn</th><th>Telefonnummer</th><th>E-post</th>";
 ut += "</tr>";
