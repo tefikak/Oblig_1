@@ -13,6 +13,7 @@ function kjopBillett(){
         if (Fornavn === ''){
             document.getElementById('FornavnBox').innerText='Vennligst skriv navnet ditt';
     }
+
     let Etternavn = document.getElementById('Etternavn').value;
 
         if (Etternavn === ''){
@@ -21,14 +22,25 @@ function kjopBillett(){
     let Telefonnr = document.getElementById('Telefonnr').value;
         if (Telefonnr === ''){
             document.getElementById('TelefonnrBox').innerText='Vennligst skriv et telefon nummer';
-    }
+    } else if (!telnr(Telefonnr)){
+            document.getElementById('TelefonnrBox').innerText='Vennligst skriv en gyldig telefonnummer'
+        }
 
     let Epost = document.getElementById('Epost').value;
         if (Epost === ''){
             document.getElementById('EpostBox').innerText='Vennligst skriv en e-post adresse';
+    } else if (!Email(Epost)){
+            document.getElementById('EpostBox').innerText='Vennligst skriv en gyldig e-post adresse'
+        }
+
+    function Email(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
     }
-
-
+    function telnr(tel) {
+        const emailRegex = /^[0-9]{8}$/;
+        return emailRegex.test(tel);
+    }
 
     let billett = {
         filmnavn:filmnavn,
