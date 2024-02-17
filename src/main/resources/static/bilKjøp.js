@@ -20,18 +20,14 @@ function kjopBillett(){
             document.getElementById('EtternavnBox').innerText='Vennligst skriv etternavnet ditt';
     }
     let Telefonnr = document.getElementById('Telefonnr').value;
-        if (Telefonnr === ''){
-            document.getElementById('TelefonnrBox').innerText='Vennligst skriv et telefon nummer';
-    } else if (!telnr(Telefonnr)){
-            document.getElementById('TelefonnrBox').innerText='Vennligst skriv en gyldig telefonnummer'
-        }
+        if (Telefonnr === '' || !telnr(Telefonnr)){
+            document.getElementById('TelefonnrBox').innerText='Vennligst skriv et gyldig telefon nummer';
+    }
 
     let Epost = document.getElementById('Epost').value;
-        if (Epost === ''){
-            document.getElementById('EpostBox').innerText='Vennligst skriv en e-post adresse';
-    } else if (!Email(Epost)){
-            document.getElementById('EpostBox').innerText='Vennligst skriv en gyldig e-post adresse'
-        }
+        if (Epost === '' || !Email(Epost)){
+            document.getElementById('EpostBox').innerText='Vennligst skriv en gyldig e-post adresse';
+    }
 
     function Email(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
